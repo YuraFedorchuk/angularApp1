@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Dodecahedron",
+    "price": 2.95,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
+    "canPurchase": false,
+    "soldOut": false,
+    "image": "http://www.clker.com/cliparts/d/9/p/j/o/k/dodecahedron-hi.png",
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "I love this product!",
+        "author": "joe@thomas.com"
+      }
+    ]
+  },
+  {
+    "name": "Pyramid",
+    "price": 7.95,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
+    "canPurchase": false,
+    "soldOut": false,
+    "image": "http://vignette1.wikia.nocookie.net/battlefordreamislandfanfiction/images/5/5b/Pyramid_New_Body.png/revision/latest?cb=20130716220612",
+    "reviews": [
+      {
+        "stars": 4,
+        "body": "Pretty nice product!",
+        "author": "tim@hater.com"
+      }
+    ]
+  },
+  {
+    "name": "Octahedron ",
+    "price": 5.2,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
+    "canPurchase": false,
+    "soldOut": false,
+    "image": "http://4vector.com/i/free-vector-octahedron_099014_Octahedron.png",
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "Great thing. Thank you!",
+        "author": "brus@gmail.com"
+      }
+    ]
+  }
+]

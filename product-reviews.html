@@ -1,0 +1,54 @@
+<!-- <div class="panel" ng-show="tab === 3"> -->
+<div class="panel" ng-show="panel.isSelected(3)">
+  <h4 class="lead">Reviews</h4>
+  <!-- Add reviews loop -->
+  <blockquote ng-repeat="review in product.reviews">
+    <b>Stars: {{review.stars}}</b>
+    <p>{{review.body}}</p>
+    <cite class="small">by: {{review.author}}</cite>
+  </blockquote>
+
+  <!-- ng-submit is called when a form is submitted. UPD: and valid also!-->
+  <!-- Novalidate parameter resets the default HTML validation -->
+  <form name="reviewForm"  ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+    <!-- Show the current review typed -->
+    <!-- We need to bind each element in blockquote to the element of a form -->
+    <div class="form-group">
+      <blockquote>
+        <b>Stars: {{reviewCtrl.review.stars}}</b>
+        <p>{{reviewCtrl.review.body}}</p>
+        <cite class="small">by: {{reviewCtrl.review.author}}</cite>
+      </blockquote>
+    </div>
+
+
+    <!-- Form elements to add new review -->
+    <!-- ng-model is used to bind the form element with the expression above -->
+    <!-- Required attribute sets the field to be required -->
+
+    <div class="form-group">
+      <label>Rate a product:</label>
+      <select placehoder="Rate a product" class="form-control" ng-model="reviewCtrl.review.stars" required>
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Add a comment" class="form-control" ng-model="reviewCtrl.review.body" required></textarea>
+    </div>
+    <div class="form-group">
+      <label>by:</label>
+      <input placeholder="Type your email"class="form-control" ng-model="reviewCtrl.review.author" type="email" required />
+    </div>
+
+
+    <!-- Some debugging code -->
+    <!-- Print if the form is valid -->
+    <!-- $ means we take a built in property of a form -->
+    <!-- <div> reviewForm is {{reviewForm.$valid}} </div> -->
+    <input class="form-control btn btn-primary" style="width: 150px;" type="submit" value="Submit" />
+  </form>
+</div>

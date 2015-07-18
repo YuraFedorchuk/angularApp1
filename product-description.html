@@ -1,0 +1,10 @@
+<!-- These panels are hidden -->
+<!-- When the appropriate link(tab) is clicked -->
+<!-- the appropriate panel is shown -->
+<!-- <div class="panel" ng-show="tab === 1"> -->
+<div class="panel" ng-show="panel.isSelected(1)">
+  <h4 class="lead">Description</h4>
+  <p>
+    {{product.description}}
+  </p>
+</div>

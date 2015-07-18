@@ -1,0 +1,12 @@
+<!-- Show all values stored in the Controller-->
+<em class="pull-left">{{product.name}}</em>
+<!-- This is Filter example. Show number as currency formatted -->
+<em class="pull-right">{{product.price | currency}}</em>
+<div class="clearfix"></div>
+<div class="image">
+  <img ng-src="{{product.image}}" />
+</div>
+<hr />
+<!--<p>{{product.description}}</p>-->
+<!-- Show this button if canPurchase is true -->
+<!--<button ng-show="product.canPurchase">Add to Cart</button>-->

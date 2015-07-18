@@ -1,0 +1,53 @@
+<!--
+  EXPRESSIONS:
+  => This is an Expression example
+  => <p>I am {{"hello" + "world"}}</p>
+
+  FILTERS:
+  => General Template for filters
+  => {{ data | filter:options }}
+  => Example using date formatting:
+  => {{ '138812342323' | date:'MM/dd/yyyy @ h:mma'}}
+  => Uppercase or lowercase filter
+  => {{ 'octagon gem' | uppercase }}
+  => Limit the number of characters in the string
+  => {{ 'My Description' | limitTo:8 }}
+  => OR limit the number of items in an array
+  => <li ng-repeat="product in store.products | limitTo:3">
+  => Sorting (here descending)
+  => <li ng-repeat="product in store.products | orderBy:'-price'">
+-->
+<!DOCTYPE html>
+<!-- Show that this part of HTML is a part of angular app -->
+<!-- This means we can start running the expressions -->
+<!-- This is a Directive example -->
+<html ng-app="store">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Angular App1</title>
+    <link rel="stylesheet" href="app.css" media="screen" charset="utf-8">
+  </head>
+  <!-- Data that is taken from the Controller and put into HTML -->
+  <!-- Allows as to attach the Controller to the element -->
+  <!-- "[Controller name] as [Alias-псевдоним]" -->
+  <body ng-controller="StoreController as store">
+      <h1 class="header">Geometric Store</h1>
+      <!-- Loop throw all products in array -->
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="product in store.products">
+        <!-- Instead of printing the title of a product we put it in the separate file -->
+        <!-- Then use ng-include Directive to load the file in the appropriate place -->
+        <!-- <h3 ng-include="'product-title.html'"></h3> -->
+        <!-- There is more convenient way to include a file - just use it as HTML tag! -->
+        <h3><product-title></product-title></h3>
+        <product-panels></product-panels>
+      </li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="products.js" charset="utf-8"></script>
+    <script src="product-panels.js" charset="utf-8"></script>
+  </body>
+</html>
